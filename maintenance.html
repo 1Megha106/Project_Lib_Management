@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance</title>
+    <link rel="stylesheet" href="assets/styles/maintenance.css">
+</head>
+<body>
+    <header>
+        <h1>Maintenance Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="admin-home.html">Home</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="book-maintenance">
+            <h2>Book Maintenance</h2>
+            <form id="add-book-form">
+                <h3>Add a New Book</h3>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <input type="text" id="author" name="author" placeholder="Author" required>
+                <input type="text" id="edition" name="edition" placeholder="Edition" required>
+                <input type="number" id="publication_year" name="publication_year" placeholder="Publication Year" required>
+                <button type="submit">Add Book</button>
+            </form>
+            <form id="update-book-form">
+                <h3>Update Book Details</h3>
+                <input type="number" id="book-id" name="book-id" placeholder="Book ID" required>
+                <input type="text" id="update-title" name="update-title" placeholder="New Title">
+                <input type="text" id="update-author" name="update-author" placeholder="New Author">
+                <input type="text" id="update-edition" name="update-edition" placeholder="New Edition">
+                <input type="number" id="update-publication_year" name="update-publication_year" placeholder="New Publication Year">
+                <button type="submit">Update Book</button>
+            </form>
+        </section>
+        
+        <section id="user-management">
+            <h2>User Management</h2>
+            <form id="add-user-form">
+                <h3>Add a New User</h3>
+                <input type="text" id="user-name" name="user-name" placeholder="Name" required>
+                <input type="email" id="user-email" name="user-email" placeholder="Email" required>
+                <button type="submit">Add User</button>
+            </form>
+            <form id="update-user-form">
+                <h3>Update User Details</h3>
+                <input type="number" id="user-id" name="user-id" placeholder="User ID" required>
+                <input type="text" id="update-user-name" name="update-user-name" placeholder="New Name">
+                <input type="email" id="update-user-email" name="update-user-email" placeholder="New Email">
+                <button type="submit">Update User</button>
+            </form>
+        </section>
+
+        <section id="maintenance-tasks">
+            <h2>Maintenance Tasks</h2>
+            <button id="fetch-reports">Fetch Reports</button>
+            <button id="view-active-issues">View Active Issues</button>
+            <button id="view-overdue-returns">View Overdue Returns</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+
+    <script src="assets/scripts/dynamic-content.js"></script>
+    <script src="assets/scripts/ajax-requests.js"></script>
+    <script src="assets/scripts/interactive-features.js"></script>
+    <script>
+        // Handle form submissions for book maintenance
+        document.getElementById('add-book-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Implement AJAX request to add a book
+        });
+
+        document.getElementById('update-book-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Implement AJAX request to update book details
+        });
+
+        // Handle form submissions for user management
+        document.getElementById('add-user-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Implement AJAX request to add a user
+        });
+
+        document.getElementById('update-user-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Implement AJAX request to update user details
+        });
+
+        // Handle maintenance tasks
+        document.getElementById('fetch-reports').addEventListener('click', function() {
+            // Implement AJAX request to fetch reports
+        });
+
+        document.getElementById('view-active-issues').addEventListener('click', function() {
+            // Implement AJAX request to view active issues
+        });
+
+        document.getElementById('view-overdue-returns').addEventListener('click', function() {
+            // Implement AJAX request to view overdue returns
+        });
+    </script>
+</body>
+</html>
